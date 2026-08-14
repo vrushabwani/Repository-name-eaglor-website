@@ -1,0 +1,50 @@
+:root {
+    --black: #0B0B0B;
+    --charcoal: #151515;
+    --white: #F5F2EA;
+    --gold: #C9A45C;
+    --light-gold: #E0C27A;
+    --gray: #A6A29A;
+    --border: #292929;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+}
+
+h1, h2, h3 {
+    color: var(--white);
+}
+
+p {
+    color: var(--gray);
+}
+
+button,
+.shop-btn {
+    background: var(--gold);
+    color: var(--black);
+}
+
+button:hover,
+.shop-btn:hover {
+    background: var(--light-gold);
+}
+
+.price {
+    color: var(--gold);
+}
+
+.product-card {
+    background: var(--charcoal);
+    border: 1px solid var(--border);
+}
+
+.product-card:hover {
+    border-color: var(--gold);
+}
+
+a:hover {
+    color: var(--gold);
+}
