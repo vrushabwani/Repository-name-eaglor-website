@@ -15,9 +15,22 @@ html {
 }
 
 body {
-    background: #030303;
+    background: #050505;
     color: #f2eee5;
     font-family: "Montserrat", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+select {
+    font-family: inherit;
+}
+
+a {
+    color: inherit;
 }
 
 .page {
@@ -31,12 +44,12 @@ body {
 ========================================================= */
 
 header {
-    height: 85px;
-    width: 100%;
-
     position: fixed;
     top: 0;
     left: 0;
+
+    width: 100%;
+    height: 82px;
 
     z-index: 1000;
 
@@ -46,11 +59,11 @@ header {
 
     padding: 0 6%;
 
-    background: rgba(3, 3, 3, 0.97);
+    background: rgba(5, 5, 5, 0.94);
 
-    border-bottom: 1px solid rgba(177, 116, 61, 0.25);
+    border-bottom: 1px solid rgba(183, 122, 67, 0.22);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(14px);
 }
 
 .logo {
@@ -62,24 +75,27 @@ header {
     font-weight: 600;
 
     letter-spacing: 8px;
+
+    text-decoration: none;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 38px;
+    gap: 34px;
 }
 
 nav a {
     position: relative;
 
-    color: #999;
+    color: #9b9b9b;
 
     text-decoration: none;
 
     font-size: 10px;
+    font-weight: 500;
 
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
 
     transition: 0.3s;
 }
@@ -101,7 +117,7 @@ nav a::after {
 }
 
 nav a:hover {
-    color: #c9955c;
+    color: #d2a16d;
 }
 
 nav a:hover::after {
@@ -117,7 +133,7 @@ nav a:hover::after {
     min-width: 17px;
     height: 17px;
 
-    margin-left: 4px;
+    margin-left: 5px;
 
     padding: 0 4px;
 
@@ -134,6 +150,12 @@ nav a:hover::after {
 
 .menu {
     display: none;
+
+    color: #d2a16d;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
 }
 
 
@@ -142,14 +164,12 @@ nav a:hover::after {
 ========================================================= */
 
 .hero {
-    width: 100%;
-    height: 100vh;
-
-    min-height: 650px;
-
-    padding-top: 85px;
-
     position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 82px 6% 50px;
 
     display: flex;
     align-items: center;
@@ -162,21 +182,11 @@ nav a:hover::after {
     background:
         radial-gradient(
             circle at center,
-            rgba(183, 122, 67, 0.13),
-            transparent 40%
+            rgba(183, 122, 67, 0.12),
+            transparent 38%
         ),
-        radial-gradient(
-            circle at 50% 80%,
-            rgba(80, 70, 50, 0.08),
-            transparent 35%
-        ),
-        #030303;
+        #050505;
 }
-
-
-/* =========================================================
-   HERO FRAME
-========================================================= */
 
 .hero::before {
     content: "";
@@ -185,15 +195,10 @@ nav a:hover::after {
 
     inset: 110px 35px 35px;
 
-    border: 1px solid rgba(183, 122, 67, 0.22);
+    border: 1px solid rgba(183, 122, 67, 0.18);
 
     pointer-events: none;
 }
-
-
-/* =========================================================
-   BACKGROUND EAGLOR
-========================================================= */
 
 .hero::after {
     content: "EAGLOR";
@@ -210,18 +215,15 @@ nav a:hover::after {
     font-family: "Cormorant Garamond", serif;
 
     font-size: 25vw;
-
     font-weight: 600;
 
-    letter-spacing: -10px;
+    letter-spacing: -12px;
 
     color: transparent;
 
-    -webkit-text-stroke: 1px rgba(183, 122, 67, 0.07);
+    -webkit-text-stroke: 1px rgba(183, 122, 67, 0.055);
 
     pointer-events: none;
-
-    z-index: 0;
 }
 
 .hero-content {
@@ -229,7 +231,7 @@ nav a:hover::after {
 
     z-index: 2;
 
-    width: 90%;
+    width: 100%;
 }
 
 .est {
@@ -251,19 +253,15 @@ nav a:hover::after {
 
     font-weight: 600;
 
-    line-height: 0.7;
+    line-height: 0.72;
 
-    letter-spacing: 5px;
+    letter-spacing: 4px;
 
     text-transform: uppercase;
-
-    text-shadow:
-        0 0 35px rgba(255, 255, 255, 0.05);
 }
 
 .gold-line {
     width: 90px;
-
     height: 1px;
 
     background: #b77a43;
@@ -272,11 +270,9 @@ nav a:hover::after {
 }
 
 .hero h2 {
-    font-family: "Montserrat", sans-serif;
-
     color: #c9955c;
 
-    font-size: clamp(15px, 2vw, 24px);
+    font-size: clamp(15px, 2vw, 23px);
 
     font-weight: 500;
 
@@ -286,36 +282,21 @@ nav a:hover::after {
 }
 
 .hero p {
-    margin-top: 20px;
+    margin-top: 18px;
 
     color: #777;
 
     font-size: 8px;
 
-    letter-spacing: 5px;
-}
-
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.shop-button,
-.add-cart,
-.checkout-button {
-    cursor: pointer;
-
-    font-family: "Montserrat", sans-serif;
-
-    transition: 0.3s;
+    letter-spacing: 4px;
 }
 
 .shop-button {
     display: inline-block;
 
-    margin-top: 35px;
+    margin-top: 34px;
 
-    padding: 15px 30px;
+    padding: 15px 32px;
 
     background: transparent;
 
@@ -326,16 +307,173 @@ nav a:hover::after {
     text-decoration: none;
 
     font-size: 9px;
-
     font-weight: 500;
 
     letter-spacing: 3px;
+
+    transition: 0.35s;
 }
 
 .shop-button:hover {
     background: #b77a43;
 
-    color: #000;
+    color: #050505;
+}
+
+
+/* =========================================================
+   SECTION COMMON
+========================================================= */
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-heading span {
+    color: #b77a43;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    margin-top: 13px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    color: #f2eee5;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    font-weight: 500;
+}
+
+.section-heading p {
+    margin-top: 12px;
+
+    color: #666;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.categories {
+    padding: 120px 6%;
+
+    background: #070707;
+}
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.category-card {
+    position: relative;
+
+    height: 520px;
+
+    overflow: hidden;
+
+    background: #0c0c0c;
+
+    border: 1px solid #1c1c1c;
+
+    text-decoration: none;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.8s ease;
+}
+
+.category-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.03) 25%,
+            rgba(0, 0, 0, 0.82) 100%
+        );
+}
+
+.category-card:hover img {
+    transform: scale(1.06);
+}
+
+.category-content {
+    position: absolute;
+
+    left: 35px;
+    bottom: 32px;
+
+    z-index: 2;
+}
+
+.category-content span {
+    display: block;
+
+    color: #c9955c;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 8px;
+}
+
+.category-content h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    color: #fff;
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.category-content p {
+    margin-top: 12px;
+
+    color: #ddd;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   FEATURED CATEGORY
+========================================================= */
+
+.category-card.large {
+    grid-column: span 2;
+
+    height: 620px;
 }
 
 
@@ -344,54 +482,17 @@ nav a:hover::after {
 ========================================================= */
 
 .collection {
-    padding: 130px 7%;
+    padding: 130px 6%;
 
     background:
         linear-gradient(
             180deg,
-            #070707 0%,
-            #090909 100%
+            #090909,
+            #060606
         );
 }
 
-.section-title span {
-    color: #b77a43;
-
-    font-size: 9px;
-
-    letter-spacing: 4px;
-}
-
-.section-title h2 {
-    margin-top: 15px;
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 50px;
-
-    font-weight: 500;
-
-    color: #f2eee5;
-}
-
-.section-title p {
-    margin-top: 12px;
-
-    color: #555;
-
-    font-size: 9px;
-
-    letter-spacing: 3px;
-}
-
-
-/* =========================================================
-   PRODUCTS
-========================================================= */
-
 .products {
-    margin-top: 55px;
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -402,42 +503,40 @@ nav a:hover::after {
 .product {
     position: relative;
 
+    overflow: hidden;
+
     background: #0d0d0d;
 
-    border: 1px solid #1d1d1d;
-
-    overflow: hidden;
+    border: 1px solid #1c1c1c;
 
     transition: 0.4s;
 }
 
 .product:hover {
-    border-color: rgba(183, 122, 67, 0.8);
+    transform: translateY(-6px);
 
-    transform: translateY(-7px);
+    border-color: rgba(183, 122, 67, 0.7);
 
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
 }
 
 .product img {
     width: 100%;
-
-    height: 430px;
+    height: 460px;
 
     object-fit: cover;
 
     display: block;
 
-    transition: 0.5s;
+    transition: transform 0.6s ease;
 }
 
 .product:hover img {
-    transform: scale(1.03);
+    transform: scale(1.035);
 }
 
 .product-info {
-    padding: 22px;
+    padding: 23px;
 }
 
 .product-info span {
@@ -449,13 +548,13 @@ nav a:hover::after {
 }
 
 .product-info h3 {
-    margin-top: 10px;
-
-    font-family: "Cormorant Garamond", serif;
+    margin-top: 9px;
 
     color: #fff;
 
-    font-size: 23px;
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
 
     font-weight: 500;
 }
@@ -463,11 +562,11 @@ nav a:hover::after {
 .product-info strong {
     display: block;
 
-    margin-top: 10px;
+    margin-top: 9px;
 
     color: #d2a16d;
 
-    font-size: 16px;
+    font-size: 15px;
 }
 
 
@@ -476,13 +575,13 @@ nav a:hover::after {
 ========================================================= */
 
 .color-section {
-    margin-top: 18px;
-
     display: flex;
 
     flex-direction: column;
 
     gap: 8px;
+
+    margin-top: 18px;
 }
 
 .color-section label {
@@ -502,11 +601,9 @@ nav a:hover::after {
 
     border: 1px solid #282828;
 
-    color: #ddd;
-
     outline: none;
 
-    font-family: "Montserrat", sans-serif;
+    color: #ddd;
 
     font-size: 10px;
 
@@ -530,7 +627,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   ADD CART BUTTON
+   ADD CART
 ========================================================= */
 
 .add-cart {
@@ -542,13 +639,17 @@ nav a:hover::after {
 
     background: transparent;
 
-    border: 1px solid #393939;
+    border: 1px solid #383838;
 
     color: #c9955c;
 
     font-size: 9px;
 
     letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
 .add-cart:hover {
@@ -565,11 +666,11 @@ nav a:hover::after {
 ========================================================= */
 
 .cart {
-    padding: 130px 7%;
+    padding: 120px 7%;
 
     background: #030303;
 
-    border-top: 1px solid #171717;
+    border-top: 1px solid #181818;
 }
 
 #cart-items {
@@ -589,11 +690,6 @@ nav a:hover::after {
 
     letter-spacing: 3px;
 }
-
-
-/* =========================================================
-   CART ITEM
-========================================================= */
 
 .cart-item {
     display: flex;
@@ -630,13 +726,13 @@ nav a:hover::after {
 .cart-item h3 {
     margin-top: 8px;
 
+    color: #f2eee5;
+
     font-family: "Cormorant Garamond", serif;
 
     font-size: 24px;
 
     font-weight: 500;
-
-    color: #f2eee5;
 }
 
 .cart-item p {
@@ -671,8 +767,6 @@ nav a:hover::after {
     border: 1px solid #333;
 
     color: #777;
-
-    font-family: "Montserrat", sans-serif;
 
     font-size: 8px;
 
@@ -724,11 +818,6 @@ nav a:hover::after {
     letter-spacing: 1px;
 }
 
-
-/* =========================================================
-   CHECKOUT
-========================================================= */
-
 .checkout-button {
     width: 100%;
 
@@ -747,6 +836,10 @@ nav a:hover::after {
     font-weight: 600;
 
     letter-spacing: 4px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
 .checkout-button:hover {
@@ -761,13 +854,13 @@ nav a:hover::after {
 ========================================================= */
 
 .about {
-    padding: 140px 8%;
+    padding: 150px 8%;
 
     text-align: center;
 
-    background: #030303;
+    background: #050505;
 
-    border-top: 1px solid #1c1c1c;
+    border-top: 1px solid #1b1b1b;
 }
 
 .about > span {
@@ -781,25 +874,25 @@ nav a:hover::after {
 .about h2 {
     margin-top: 25px;
 
+    color: #f2eee5;
+
     font-family: "Cormorant Garamond", serif;
 
-    font-size: clamp(60px, 9vw, 120px);
+    font-size: clamp(65px, 9vw, 125px);
 
     font-weight: 500;
-
-    color: #f2eee5;
 }
 
 .about p {
-    max-width: 600px;
+    max-width: 620px;
 
     margin: 30px auto;
 
     color: #777;
 
-    line-height: 1.9;
-
     font-size: 13px;
+
+    line-height: 1.9;
 }
 
 
@@ -826,9 +919,9 @@ footer {
 }
 
 .footer-logo {
-    font-family: "Cormorant Garamond", serif;
-
     color: #f2eee5;
+
+    font-family: "Cormorant Garamond", serif;
 
     font-size: 25px;
 
@@ -840,15 +933,7 @@ footer {
    TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
-
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .product img {
-        height: 400px;
-    }
+@media (max-width: 1000px) {
 
     nav {
         gap: 20px;
@@ -858,6 +943,22 @@ footer {
         font-size: 8px;
 
         letter-spacing: 2px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product img {
+        height: 420px;
+    }
+
+    .category-card {
+        height: 450px;
+    }
+
+    .category-card.large {
+        height: 520px;
     }
 }
 
@@ -871,7 +972,7 @@ footer {
     header {
         height: 70px;
 
-        padding: 0 25px;
+        padding: 0 22px;
     }
 
     .logo {
@@ -886,35 +987,37 @@ footer {
 
     .menu {
         display: block;
-
-        color: #c9955c;
-
-        font-size: 9px;
-
-        letter-spacing: 3px;
     }
 
 
     /* HERO */
 
     .hero {
-        min-height: 600px;
+        min-height: 650px;
 
         padding-top: 70px;
     }
 
     .hero::before {
-        inset: 90px 15px 15px;
+        inset: 88px 14px 14px;
     }
 
     .hero::after {
-        font-size: 31vw;
+        font-size: 32vw;
+
+        letter-spacing: -5px;
     }
 
     .hero h1 {
         font-size: 23vw;
 
         letter-spacing: 2px;
+    }
+
+    .est {
+        font-size: 7px;
+
+        letter-spacing: 5px;
     }
 
     .hero h2 {
@@ -926,22 +1029,56 @@ footer {
     .hero p {
         font-size: 7px;
 
-        letter-spacing: 3px;
+        letter-spacing: 2px;
     }
 
-    .gold-line {
-        margin: 30px auto 22px;
+    .shop-button {
+        padding: 14px 25px;
     }
 
 
-    /* COLLECTION */
+    /* CATEGORIES */
+
+    .categories {
+        padding: 90px 5%;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .category-card,
+    .category-card.large {
+        grid-column: span 1;
+
+        height: 470px;
+    }
+
+    .category-content {
+        left: 24px;
+
+        bottom: 25px;
+    }
+
+    .category-content h3 {
+        font-size: 42px;
+    }
+
+
+    /* PRODUCTS */
 
     .collection {
-        padding: 90px 6%;
-    }
-
-    .section-title h2 {
-        font-size: 38px;
+        padding: 90px 5%;
     }
 
     .products {
@@ -953,7 +1090,7 @@ footer {
     .product img {
         height: auto;
 
-        max-height: 500px;
+        max-height: 560px;
     }
 
 
@@ -964,9 +1101,9 @@ footer {
     }
 
     .cart-item {
-        align-items: flex-start;
-
         flex-direction: column;
+
+        align-items: flex-start;
 
         gap: 20px;
     }
@@ -991,7 +1128,15 @@ footer {
     /* ABOUT */
 
     .about {
-        padding: 90px 7%;
+        padding: 95px 7%;
+    }
+
+    .about h2 {
+        font-size: 65px;
+    }
+
+    .about p {
+        font-size: 12px;
     }
 
 
@@ -1000,9 +1145,9 @@ footer {
     footer {
         display: block;
 
-        line-height: 3;
-
         text-align: center;
+
+        line-height: 3;
     }
 
     .footer-logo {
@@ -1025,12 +1170,17 @@ footer {
         font-size: 4.5vw;
     }
 
-    .shop-button {
-        padding: 13px 20px;
+    .section-heading h2 {
+        font-size: 36px;
     }
 
-    .section-title h2 {
-        font-size: 34px;
+    .category-card,
+    .category-card.large {
+        height: 400px;
+    }
+
+    .category-content h3 {
+        font-size: 36px;
     }
 
     .product-info h3 {
